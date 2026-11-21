@@ -1,0 +1,146 @@
+{
+  "name": "@wblxr408/research-workflows",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Trace research claims, redraw figures from data, and revise defense slides.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wblxr408/agh-plugin-research-workflows"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "agh.market.json",
+    "skills"
+  ],
+  "agnes": {
+    "provides": [
+      "skills",
+      "bundle"
+    ],
+    "contributions": [
+      {
+        "kind": "skill",
+        "id": "@wblxr408/research-workflows/workflow-research-evidence",
+        "path": "./skills/workflow-research-evidence/SKILL.md"
+      },
+      {
+        "kind": "skill",
+        "id": "@wblxr408/research-workflows/workflow-figure-redraw",
+        "path": "./skills/workflow-figure-redraw/SKILL.md"
+      },
+      {
+        "kind": "skill",
+        "id": "@wblxr408/research-workflows/workflow-defense-revision",
+        "path": "./skills/workflow-defense-revision/SKILL.md"
+      }
+    ],
+    "bundles": {
+      "workflow-research-evidence": {
+        "profile": {
+          "skills": [
+            "workflow-research-evidence"
+          ]
+        },
+        "presets": {
+          "workflow-research-evidence": {
+            "name": "workflow-research-evidence",
+            "extends": "standard"
+          }
+        },
+        "launch": {
+          "title": {
+            "en": "Research Claims and Evidence",
+            "zh-CN": "主张与证据"
+          },
+          "description": {
+            "en": "Research Claims and Evidence",
+            "zh-CN": "提炼科研贡献、核对实验结论和对照依据。"
+          },
+          "preset": "workflow-research-evidence",
+          "prompt": {
+            "mode": "draft",
+            "text": {
+              "en": "$workflow-research-evidence Research Claims and Evidence. I will provide the input and expected result.",
+              "zh-CN": "$workflow-research-evidence 请核对这项研究的主张、实验条件和证据；我会附上论文段落、结果表或运行记录。"
+            }
+          }
+        }
+      },
+      "workflow-figure-redraw": {
+        "profile": {
+          "skills": [
+            "workflow-figure-redraw"
+          ]
+        },
+        "presets": {
+          "workflow-figure-redraw": {
+            "name": "workflow-figure-redraw",
+            "extends": "standard"
+          }
+        },
+        "launch": {
+          "title": {
+            "en": "Research Figure Redraw",
+            "zh-CN": "科研图重绘"
+          },
+          "description": {
+            "en": "Research Figure Redraw",
+            "zh-CN": "按原始数据与可复核口径重绘已有科研图。"
+          },
+          "preset": "workflow-figure-redraw",
+          "prompt": {
+            "mode": "draft",
+            "text": {
+              "en": "$workflow-figure-redraw Research Figure Redraw. I will provide the input and expected result.",
+              "zh-CN": "$workflow-figure-redraw 请按源数据重绘指定科研图；我会附上原图、数据或生成脚本和目标格式。"
+            }
+          }
+        }
+      },
+      "workflow-defense-revision": {
+        "profile": {
+          "skills": [
+            "workflow-defense-revision"
+          ]
+        },
+        "presets": {
+          "workflow-defense-revision": {
+            "name": "workflow-defense-revision",
+            "extends": "standard"
+          }
+        },
+        "launch": {
+          "title": {
+            "en": "Research Defense Revision",
+            "zh-CN": "科研答辩修订"
+          },
+          "description": {
+            "en": "Research Defense Revision",
+            "zh-CN": "基于现有答辩稿修订科研叙事和指定页面。"
+          },
+          "preset": "workflow-defense-revision",
+          "prompt": {
+            "mode": "draft",
+            "text": {
+              "en": "$workflow-defense-revision Research Defense Revision. I will provide the input and expected result.",
+              "zh-CN": "$workflow-defense-revision 请基于原稿修订指定答辩页；我会提供原稿、页码、受众和已有证据。"
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "displayName": "Research Workflows",
+      "summary": "Trace research claims, redraw figures from data, and revise defense slides.",
+      "description": "Trace research claims, redraw figures from data, and revise defense slides.",
+      "locales": {
+        "zh-CN": {
+          "displayName": "科研工作流",
+          "summary": "核对科研证据、重绘图件、修订答辩稿。",
+          "description": "核对科研证据、重绘图件、修订答辩稿。"
+        }
+      }
+    }
+  }
+}
