@@ -21,17 +21,17 @@
     "contributions": [
       {
         "kind": "skill",
-        "id": "@wblxr408/research-workflows/workflow-research-evidence",
+        "id": "@wblxr408/workflow-research-evidence",
         "path": "./skills/workflow-research-evidence/SKILL.md"
       },
       {
         "kind": "skill",
-        "id": "@wblxr408/research-workflows/workflow-figure-redraw",
+        "id": "@wblxr408/workflow-figure-redraw",
         "path": "./skills/workflow-figure-redraw/SKILL.md"
       },
       {
         "kind": "skill",
-        "id": "@wblxr408/research-workflows/workflow-defense-revision",
+        "id": "@wblxr408/workflow-defense-revision",
         "path": "./skills/workflow-defense-revision/SKILL.md"
       }
     ],
